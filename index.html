@@ -8,44 +8,43 @@
 </head>
 <body>
   <script>
-    //산술연산자
-    console.log(2+3);
-    console.log(2-3);
-    console.log(2*3);
-    console.log(4/2);
-    console.log(5%2);
-
-    let num = 1;
-    console.log(--num);
-    console.log(num);
-
-
-    //비교연산자
-    console.log(3 == '3'); //값만 비교하고 자료형은 비교안함
-    console.log(3 === '3');//값과 자료형을 모두 비교
+    /*조건문
+    -비교 연산자를 활용한 조건식을 이용해서 특정 조건일대 서로 다른 코드가 실행되도록 분기처리
+    if(조건식1){
+      조건식1이 참이면 이곳의 구문이 실행
+      거짓이면 이곳의 구문 무시
+    }
+    else if(조건식2){
+      조건식2가 참이면 기옷의 구문이 실행
+      거짓이면 이곳의 구문 무시
+    }
+    else{
+      위의 모든 조건이 참이 아닐때 이곳의 구문을 실행하고 종료
+    }
+    */
+    const hour = new Date().getHours();
     
-    console.log(2 != '2');
-    console.log(2 !== '2');
-    
-    console.log(2<3);
-    console.log(2<=2);
-    
-    console.log(true && true) //두가지 값 모두여야 트루
-    console.log(true || true) //  둘중하나여도 트루
+    /*if(hour>=0 && hour <10){
+    console.log('오전입니다')
+    }
+    else if(hour >=10 && hour<15){
+      console.log('오후입니다')
+    }
+    else if(hour >=15 && hour<20){
+      console.log('저녁입니다')
+    }
+    else {
+      console.log('밤입니다')
+    }
+  */
+    if(hour>=0 && hour <10) console.log('오전입니다');
+    if(hour >=10 && hour<15)console.log('오후입니다');
+    if(hour >=15 && hour<20)console.log('저녁입니다');
+    else {
+      console.log('밤입니다')
+    }
+ 
 
-    //복합 대입 연산자
-    let num1 = 5;
-    //num1 = num1+2;
-    num1 += 2;
-    console.log(num1);
-
-    let txt1 = 'hello';
-    txt1 += 'world';
-    console.log(txt1);
-
-    let txt2 = '김';
-    txt2 += '대훈';
-    console.log(txt2);
   </script>
 
 </body>
